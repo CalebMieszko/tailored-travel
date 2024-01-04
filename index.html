@@ -4,22 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tailored Travel</title>
-    <link rel="stylesheet" href="styles.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
   </head>
   <body>
-    <h1>Welcome to Tailored Travel!</h1>
-    <label for="location-select">Choose a location:</label>
-
-    <select name="locations" id="location-select">
-      <option value="">--Please choose an option--</option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-      <option value=""></option>
-    </select>
-    <section id="map"></section>
+    <main class="wrap">
+      <section id="welcome">
+        <h1 id="welcome-heading">Welcome to Tailored Travel</h1>
+        <p class="sub-heading">
+          Your number one location for discovering worthy destinations.
+        </p>
+      </section>
+      <section id="location-select">
+        <label for="locations">What are you looking for?</label>
+        <select name="locations">
+          <option value="null">--Please choose an option--</option>
+          <option value="coffee">Coffee</option>
+          <option value="restaurant">Restaurant</option>
+          <option value="hotel">Hotel</option>
+          <option value="market">Market</option>
+        </select>
+      </section>
+      <section id="map"></section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>
